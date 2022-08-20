@@ -1,4 +1,5 @@
-function PlayerTick( player, mv )
-	RunConsoleCommand( "-zoom")	
-end
-hook.Add( "PlayerTick", "PlayerTick", PlayerTick )
+-- From Yoh Sambre (NUC FUCK SUIT ZOOM)
+
+hook.Add("PlayerInitialSpawn", "AntiZoom_InitSpawn", function(ply)  
+	ply:SetCanZoom( false )
+end)
